@@ -17,7 +17,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build JDK 8 projects
-        run: ./buildJdk8Projects.sh
+        run: mvn -B -f pom.xml clean package
   build-jdk11:
     runs-on: ubuntu-latest
     name: Build Java 11 projects
@@ -34,4 +34,4 @@ jobs:
         with:
           java-version: 11
       - name: Build JDK 11 projects
-        run: ./buildJdk11Projects.sh
+        run: mvn -B -f pom.xml clean package
